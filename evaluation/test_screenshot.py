@@ -2,10 +2,10 @@ import tensorflow as tf
 import numpy as np
 import cv2
 import os
-from visual_preprocessing import preprocess_image
+from core.visual_preprocessing import preprocess_image
 
 # 1. Load the Fused Model
-model = tf.keras.models.load_model('fused_model.h5')
+model = tf.keras.models.load_model('models/fused_model.h5')
 print("✅ Fused Model Loaded.")
 
 # 2. File and Param Setup

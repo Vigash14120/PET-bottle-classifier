@@ -4,7 +4,7 @@ from tensorflow.keras.models import Model
 import pandas as pd
 import numpy as np
 import cv2
-from visual_preprocessing import preprocess_image
+from core.visual_preprocessing import preprocess_image
 
 # 1. Load Metadata
 df = pd.read_csv("metadata_fused.csv")
@@ -111,5 +111,5 @@ model.fit(
 )
 
 # 5. Save the Fused Model
-model.save("fused_model.h5")
-print("✅ Fused Model Saved as fused_model.h5")
+model.save("models/fused_model.h5")
+print("✅ Fused Model Saved as models/fused_model.h5")

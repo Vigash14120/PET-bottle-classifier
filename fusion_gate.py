@@ -1,12 +1,12 @@
 import tensorflow as tf
 import numpy as np
 import cv2
-from visual_preprocessing import preprocess_image
-from loadcell_preprocessing import LoadCellProcessor
+from core.visual_preprocessing import preprocess_image
+from core.loadcell_preprocessing import LoadCellProcessor
 
 # 1. Load the Fused Neural Brain
 try:
-    fused_model = tf.keras.models.load_model('fused_model.h5')
+    fused_model = tf.keras.models.load_model('models/fused_model.h5')
     print("✅ Fused Multi-Modal Model Loaded.")
 except:
     print("⚠️ Fused Model not found. Start training with train_fused_model.py!")

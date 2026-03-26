@@ -2,16 +2,16 @@ import cv2
 import tensorflow as tf
 import numpy as np
 import os
-from visual_preprocessing import preprocess_image
-from loadcell_preprocessing import LoadCellProcessor
+from core.visual_preprocessing import preprocess_image
+from core.loadcell_preprocessing import LoadCellProcessor
 
 # 1. Load All Models
 print("--- 🧠 Loading AI Brain Suite ---")
 try:
     models = {
-        'fused': tf.keras.models.load_model('fused_model.h5'),
-        'vision': tf.keras.models.load_model('vision_model.h5'),
-        'weight': tf.keras.models.load_model('weight_model.h5')
+        'fused': tf.keras.models.load_model('models/fused_model.h5'),
+        'vision': tf.keras.models.load_model('models/vision_model.h5'),
+        'weight': tf.keras.models.load_model('models/weight_model.h5')
     }
     print("✅ All 3 Models (Fused, Vision, Weight) Loaded.")
 except Exception as e:

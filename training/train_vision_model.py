@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import cv2
 import random
-from visual_preprocessing import preprocess_image
+from core.visual_preprocessing import preprocess_image
 
 # 1. Load Metadata
 df = pd.read_csv("metadata_fused.csv")
@@ -79,5 +79,5 @@ model.fit(
 )
 
 # 5. Save the Vision Model
-model.save("vision_model.h5")
-print("✅ Vision Model Saved as vision_model.h5")
+model.save("models/vision_model.h5")
+print("✅ Vision Model Saved as models/vision_model.h5")

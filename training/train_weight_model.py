@@ -45,5 +45,5 @@ model.fit(
 )
 
 # 5. Save the Weight Model
-model.save("weight_model.h5")
-print("✅ Weight Model Saved as weight_model.h5")
+model.save("models/weight_model.h5")
+print("✅ Weight Model Saved as models/weight_model.h5")

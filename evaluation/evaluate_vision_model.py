@@ -4,25 +4,29 @@ import numpy as np
 import cv2
 import os
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-from visual_preprocessing import preprocess_image
+from core.visual_preprocessing import preprocess_image
 
 # 1. Load Data Metadata
 df = pd.read_csv("metadata_fused.csv")
 val_df = df[df['split'] == 'val'].copy()
 
-# 2. Load the trained Fused Model
-model = tf.keras.models.load_model('fused_model.h5')
-print("✅ Fused Model Loaded for Evaluation.")
+# 2. Load the Standalone Vision Model
+model_path = 'models/vision_model.h5'
+if not os.path.exists(model_path):
+    print(f"❌ Error: {model_path} not found. Train it first!")
+    exit(1)
 
-def evaluate():
+model = tf.keras.models.load_model(model_path)
+print("✅ Standalone Vision Model Loaded.")
+
+def evaluate_vision():
     y_true = []
     y_pred = []
     
-    print(f"--- 🧪 Evaluating on {len(val_df)} validation samples ---")
+    print(f"--- 📸 Evaluating Vision Only on {len(val_df)} validation samples ---")
     
     for _, row in val_df.iterrows():
         img_path = row['image_path']
-        raw_weight = row['weight_grams']
         true_label = row['label']
         
         # Preprocess
@@ -30,12 +34,11 @@ def evaluate():
         img_p = preprocess_image(img)
         
         if img_p is not None:
-            # Batch inputs
+            # Batch input (Image Only)
             img_batch = np.expand_dims(img_p, axis=0)
-            weight_batch = np.array([[raw_weight / 100.0]])
             
             # Predict
-            res = model.predict({'image_input': img_batch, 'weight_input': weight_batch}, verbose=0)[0][0]
+            res = model.predict(img_batch, verbose=0)[0][0]
             
             # Binary threshold
             pred_label = 1 if res >= 0.5 else 0
@@ -49,7 +52,7 @@ def evaluate():
     cm = confusion_matrix(y_true, y_pred)
 
     print("\n" + "="*40)
-    print(f"📊 EVALUATION REPORT")
+    print(f"🖼️ VISION-ONLY EVALUATION REPORT")
     print("="*40)
     print(f"Overall Accuracy: {acc*100:.2f}%")
     print("\nDetailed Metrics:")
@@ -59,4 +62,4 @@ def evaluate():
     print("="*40)
 
 if __name__ == "__main__":
-    evaluate()
+    evaluate_vision()
