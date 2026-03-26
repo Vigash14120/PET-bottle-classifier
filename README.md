@@ -5,12 +5,12 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-Latest-green)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 
- वेलकम टू द **PET Multi-Modal Classifier**! This system uses both Computer Vision and Load Cell data (weight) to classify PET and HDPE bottles with pinpoint accuracy.
+Welcome to the **PET Multi-Modal Classifier**! This system uses both Computer Vision and Load Cell data (weight) to classify PET and HDPE bottles with pinpoint accuracy.
 
 ---
 
 ## 🗺️ Project Workflow
-![System Workflow](diagrams/Workflow%20diagram.jpg)
+![System Workflow](Diagrams/Workflow%20diagram.jpg)
 
 ---
 
@@ -18,10 +18,10 @@
 This project features three distinct AI models, allowing the system to adapt if sensors (camera or scale) fail:
 
 1.  ⚖️ **Weight Model** (`weight_model.h5`): Uses only mass to classify bottles. (Accuracy: **100%**)
-    ![Weight Architecture](diagrams/weight%20model%20architecture%20diagram.png)
+    ![Weight Architecture](Diagrams/weight%20model%20architecture%20diagram.png)
 
 2.  📸 **Vision Model** (`vision_model.h5`): Uses only the camera feed. (Accuracy: **~94%**)
-    ![Vision Architecture](diagrams/vision%20model%20architecture%20diagram.png)
+    ![Vision Architecture](Diagrams/vision%20model%20architecture%20diagram.png)
 
 3.  🚀 **Fused Model** (`fused_model.h5`): **Multimodal Fusion Engine** that combines both sensors for maximum speed and accuracy. (Accuracy: **100%**)
 
