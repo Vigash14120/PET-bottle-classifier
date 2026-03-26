@@ -10,7 +10,7 @@ Welcome to the **PET Multi-Modal Classifier**! This system uses both Computer Vi
 ---
 
 ## 🗺️ Project Workflow
-![System Workflow](Diagrams/Workflow%20diagram.jpg)
+<img src="Diagrams/Workflow%20diagram.jpg" width="600">
 
 ---
 
@@ -18,10 +18,10 @@ Welcome to the **PET Multi-Modal Classifier**! This system uses both Computer Vi
 This project features three distinct AI models, allowing the system to adapt if sensors (camera or scale) fail:
 
 1.  ⚖️ **Weight Model** (`weight_model.h5`): Uses only mass to classify bottles. (Accuracy: **100%**)
-    ![Weight Architecture](Diagrams/weight%20model%20architecture%20diagram.png)
+    <img src="Diagrams/weight%20model%20architecture%20diagram.png" width="400">
 
 2.  📸 **Vision Model** (`vision_model.h5`): Uses only the camera feed. (Accuracy: **~94%**)
-    ![Vision Architecture](Diagrams/vision%20model%20architecture%20diagram.png)
+    <img src="Diagrams/vision%20model%20architecture%20diagram.png" width="400">
 
 3.  🚀 **Fused Model** (`fused_model.h5`): **Multimodal Fusion Engine** that combines both sensors for maximum speed and accuracy. (Accuracy: **100%**)
 
