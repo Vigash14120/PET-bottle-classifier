@@ -1,0 +1,17 @@
+# Python virtual environment
+.venv/
+env/
+venv/
+__pycache__/
+
+# Dataset (Usually very large, keep local or use Git LFS)
+data/
+
+# Model Files (Optional: keep these out if they are large)
+# *.h5
+
+# Local IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+*.pyc
