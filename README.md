@@ -101,20 +101,6 @@ While the Fused system hits 100%, our custom **Vision AI** independently achieve
 
 <img src="Diagrams/Vision%20Confusion%20Matrix.png" width="300"> <img src="Diagrams/Vision%20ROC%20Curve%20and%20AUC.png" width="300"> <img src="Diagrams/Vision%20Performance%20Framework.png" width="300">
 
-```text
-========================================
-📊 FINAL EVALUATION REPORT
-========================================
-Overall Accuracy: 100.00%
-
-Detailed Metrics:
-              precision    recall  f1-score   support    
-
-     PET (0)       1.00      1.00      1.00       301    
-    HDPE (1)       1.00      1.00      1.00       205    
-========================================
-```
-
 ---
 
 ## 📂 Project Structure
