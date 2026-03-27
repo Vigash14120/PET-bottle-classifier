@@ -64,6 +64,11 @@ We tested three different architectural approaches to find the most robust sorti
 | **🎯 Custom Vision Nano** | **~40k Params** | **< 1.0 MB** | **< 55ms (CPU)** | **93.8%** |
 | **🚀 Fused (Hybrid)** | **Both Sensors** | **100.0%** | **Extreme (Redundant & Robust)** |
 
+## 📊 Comparative Performance Analysis
+Our **Fused Nano** model outperforms standard cloud-based and heavyweight vision architectures by optimizing both for accuracy and **ultra-low latency**.
+
+<img src="Diagrams/Comparative%20Analysis%20Report.png" width="800">
+
 ### **⭐ Why our Vision Model wins:**
 Despite being **Over 1,300x smaller** than VGG-16, our model achieves nearly **identical accuracy**.
 
