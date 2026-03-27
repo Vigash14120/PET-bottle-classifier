@@ -27,6 +27,21 @@ This project features three distinct AI models, allowing the system to adapt if 
 
 ---
 
+## 🛡️ System Resilience & Anomaly Detection
+A key advantage of our **Multi-Modal AI** approach is its ability to handle "deceptive" inputs that would fool a standard single-sensor system.
+
+### **The "Water-Filled Bottle" Test 🧪**
+**Scenario**: A PET bottle is filled with water, artificially increasing its mass to match a typical HDPE bottle.
+- **Traditional Weight Sorter**: ❌ **FAILS**. Labels the heavy PET as **HDPE**.
+- **Traditional Vision Sorter**: ⚠️ **UNSURE**. May be confused by the water's optical properties.
+- **🎯 Our Fused Nano Brain**: ✅ **PASSES**. The model is trained to recognize the "Clear/Shiny" visual features of PET and uses that to **override** the deceptive weight reading.
+
+### **Sensor Redundancy Benefits:**
+- **Lighting Failure**: If the sorting environment is dark, the **Load Cell (Weight)** sensor carries the decision.
+- **Crushed/Dirty Bottles**: If the visual profile is obscured by dirt or crushing, the **Weight Component** ensures accuracy remains at **100%**.
+
+---
+
 ## 🏗️ Getting Started
 
 ### 1. Prerequisites
