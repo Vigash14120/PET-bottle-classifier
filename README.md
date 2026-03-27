@@ -99,7 +99,9 @@ While the Fused system hits 100%, our custom **Vision AI** independently achieve
 | **Vision ROC Curve & AUC** | Measures the model's discriminatory power. |
 | **Vision Performance Framework** | Summarizes Precision, Recall, and F1-Score. |
 
-<img src="Diagrams/Vision%20Confusion%20Matrix.png" width="300"> <img src="Diagrams/Vision%20ROC%20Curve%20and%20AUC.png" width="300"> <img src="Diagrams/Vision%20Performance%20Framework.png" width="300">
+<img src="Diagrams/Vision%20Confusion%20Matrix.png" width="500"> 
+<img src="Diagrams/Vision%20ROC%20Curve%20and%20AUC.png" width="500"> 
+<img src="Diagrams/Vision%20Performance%20Framework.png" width="500">
 
 ---
 
