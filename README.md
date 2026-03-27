@@ -90,7 +90,16 @@ Despite being **Over 1,300x smaller** than VGG-16, our model achieves nearly **i
 ---
 
 ## 📸 Evaluation Metrics (Fused Multi-Modal)
-We achieved perfection across both PET and HDPE categories in our final model-level fusion training.
+We achieved perfection across both PET and HDPE categories in our final model-level fusion training. 
+
+### **🧠 Visual Breakdown of Decisions**
+| Metric Chart | Description |
+| :--- | :--- |
+| **Confusion Matrix** | Tracks PET vs HDPE accuracy per sample. |
+| **ROC Curve & AUC** | Measures the model's discriminatory power. |
+| **Performance Framework** | Summarizes Precision, Recall, and F1-Score. |
+
+<img src="Diagrams/AI%20Decision%20Confusion%20Matrix.png" width="300"> <img src="Diagrams/ROC%20Curve%20and%20AUC.png" width="300"> <img src="Diagrams/Overall%20Model%20Evaluation%20Framework.png" width="300">
 
 ```text
 ========================================
