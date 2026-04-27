@@ -125,7 +125,7 @@ While the Fused system hits 100%, our custom **Vision AI** independently achieve
 - `train_fused_model.py`: Training logic for the multi-modal brain.
 - `visual_preprocessing.py`: Image normalization & augmentation.
 - `loadcell_preprocessing.py`: Software Taring & Outlier rejection.
-- `data/`: Dataset containing 2,000+ bottle images.
+- `data/`: Dataset containing 2,000+ bottle images
 
 ---
 
